@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCFeDbHkEwvnM3hRmtd9QL2t0wR73G9sno</string>
+	<string>ENTER YOUR API KEY HERE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>721361894989</string>
+	<string>ENTER YOUR GCM_SENDER_ID HERE</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.fireChat</string>
+	<string>ENTER YOUR UNIQUE BUNDLE_ID HERE</string>
 	<key>PROJECT_ID</key>
-	<string>chat-app-55509</string>
+	<string>ENTER PROJECT_ID HERE</string>
 	<key>STORAGE_BUCKET</key>
-	<string>chat-app-55509.firebasestorage.app</string>
+	<string>ENTER YOUR STORAGE BUCKET ID HERE</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:721361894989:ios:67fa9d40a17d12b0ba6604</string>
+	<string>ENTER YOUR GOOGLE APP ID HERE</string>
 </dict>
 </plist>
