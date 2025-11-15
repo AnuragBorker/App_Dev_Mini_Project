@@ -9,7 +9,7 @@
 1. [Objective](#objective)
 2. [Overview](#overview)
 3. [Use Cases](#use-cases)
-4. [Download & Usage](#download--usage)
+4. [Download & Use](#download--use)
 5. [Functional Overview](#functional-overview)
 6. [Installation & Setup](#installation--setup)
 7. [User Interface](#user-interface)
@@ -45,7 +45,7 @@ FireChat is a simple and intuitive one-on-one messaging application. The first v
 
 ---
 
-## Download & Usage
+## Download & Use
 
 * **Download APK:** [Click Here](https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk)
 * **Install:** Enable installation from unknown sources and install APK.
@@ -59,17 +59,16 @@ FireChat is a simple and intuitive one-on-one messaging application. The first v
 ## Functional Overview
 
 * **Authentication**
-  * Enter login name and password to login.
-  * To sign up, enter the password twice and confirm.
+  * Enter email and password to login.
+  * To sign up, provide your name, email, the password twice and confirm.
   * Visit the Profile section.
-    * To reset password.
+    * To change password.
     * To logout from the application.
 
 * **Application Functionality**
-  * List all registered users.
-  * Tap on a listed user tile to initiate a conversation or send a message.
-    * Type the message and submit (text only). One-on-one messaging in real-time (text only) supported.
-    * Only the recepient can see the message sent to him.
+  * Lists all registered users. Each chat tile represents a user.
+  * Tap on a listed tile to initiate a conversation or send a message.
+    * Type the message and submit. One-on-one messaging in real-time (text only) supported.
     * Recepient will see the unread message count and preview of last message received is displayed for each chat conversation.
 
 ---
