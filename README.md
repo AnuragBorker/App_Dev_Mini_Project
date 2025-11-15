@@ -47,7 +47,7 @@ FireChat is a simple and intuitive one-on-one messaging application. The first v
 
 ## Download & Usage
 
-* **Download APK:** [[Click Here to start apk download](https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk)]
+* **Download APK:** [Click Here](https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk)
 * **Install:** Enable installation from unknown sources and install APK.
 * **Use:** Open app → browse participants → start chatting.
 
