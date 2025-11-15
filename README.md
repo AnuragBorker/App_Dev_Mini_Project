@@ -12,7 +12,7 @@
 4. [Download & Usage](#download--usage)
 5. [Functional Overview](#functional-overview)
 6. [Installation & Setup](#installation--setup)
-7. [Usage](#usage)
+7. [User Interface](#user-interface)
 8. [Architecture & Technical Details](#architecture--technical-details)
 9. [Dependencies](#dependencies)
 10. [Future Enhancements](#future-enhancements)
