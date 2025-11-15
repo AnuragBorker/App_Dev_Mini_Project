@@ -1,6 +1,6 @@
 # FireChat
 
-**FireChat** is a simple and intuitive one-on-one messaging application built with **Flutter** and **Firebase**. It allows users to browse participants, start private chats, and manage profiles with real-time text messaging. The app demonstrates Firebase authentication, state management with Provider, and a clean responsive UI.
+**FireChat** offers fast and reliable real-time text messaging through a clean responsive Flutter interface powered by Firebase.
 
 ---
 
@@ -22,15 +22,17 @@
 
 ## Objective
 
-* Build a fully functional messaging app using Flutter and Firebase.
-* Gain experience across the development lifecycle: design, coding, testing on emulators, and deploying APK on Android.
-* Ensure the app is seamless, easy to use, and downloadable.
+* Build a real-time text messaging application using Flutter and Firebase.
+* Implement basic use authentication.
+* Design an intuitive, mobile UI for sending and receiving text messages.
+* Learn practical integration of a mobile frontend with a cloud backend (cloud_firestore).
+* Demonstrate coding skills in application development,testing, and deployment.
 
 ---
 
 ## Overview
 
-FireChat is a simple and intuitive one-on-one messaging application. The first version supports only a single collaboration at a time. Users can browse all participants and start private chats instantly, making communication quick, secure, and smooth.
+FireChat is a simple and intuitive one-on-one messaging application. The first version supports single collaboration at a time. Users can browse all participants and start private chats instantly with any one, making communication quick and smooth.
 
 ---
 
@@ -39,13 +41,13 @@ FireChat is a simple and intuitive one-on-one messaging application. The first v
 * **Campus Chat:** Connect with classmates and friends.
 * **Small Team Collaboration:** Discuss tasks in project groups.
 * **Corporate Messaging:** Quick chats with colleagues.
-* **Community Groups:** Share ideas in clubs or interest groups.
+* **Community Groups:** Share ideas in clubs, projects, or interest groups.
 
 ---
 
 ## Download & Usage
 
-* **Download APK:** [[Click here to start apk download](https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk)]
+* **Download APK:** [[Click Here to start apk download](https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk)]
 * **Install:** Enable installation from unknown sources and install APK.
 * **Use:** Open app → browse participants → start chatting.
 
@@ -56,13 +58,19 @@ FireChat is a simple and intuitive one-on-one messaging application. The first v
 
 ## Functional Overview
 
-* Lists all registered users.
-* One-on-one messaging in real-time (text only).
-* Simple, intuitive interface.
-* Users can change password and logout from the **Profiles Page**.
-* Supports only one active collaboration per user in this version.
-* **Sign In / Sign Up Screens:** Handle authentication.
-* **Profile photo upload:** Not currently supported due to Firebase Blaze subscription requirement.
+* **Authentication**
+  * Enter login name and password to login.
+  * To sign up, enter the password twice and confirm.
+  * Visit the Profile section.
+    * To reset password.
+    * To logout from the application.
+
+* **Application Functionality**
+  * List all registered users.
+  * Tap on a listed user tile to initiate a conversation or send a message.
+    * Type the message and submit (text only). One-on-one messaging in real-time (text only) supported.
+    * Only the recepient can see the message sent to him.
+    * Recepient will see the unread message count and preview of last message received is displayed for each chat conversation.
 
 ---
 
@@ -108,23 +116,23 @@ flutter run
 
 ---
 
-## Usage
+## User Interface
 
-* **Chat List Screen:** Shows all participants/users. Tap a chat tile to enter a **one-to-one conversation interface** where text messages can be exchanged.
-* **Invites Screen:** Copy/share APK link or scan QR code to invite friends.
-* **Profiles Page:** Change password or logout.
 * **Sign In / Sign Up Screens:** Handle authentication.
+* **Chat List Screen:** Shows all participants/users. 
+* **1-1 Conversation Screen** where text messages can be exchanged.
+* **Invites Screen:** Copy/share APK link or scan QR code to invite friends.
+* **Profiles Screen:** Change password and logout.
 
 ---
 
 ## Architecture & Technical Details
 
-* **Frontend:** Flutter app for cross-platform mobile development.
+* **Frontend:** Flutter for cross-platform mobile development.
 * **Backend:** Firebase for authentication, real-time database, and storage.
-* **Data Model:** Users & messages stored in Firebase collections.
-* **State Management:** Provider for Flutter state management.
+* **Data Model:** Firebase collections.
+* **State Management:** Provider dependency for Flutter state management.
 * **Design Pattern:** Implements **Model-View-ViewModel (MVVM)** pattern where:
-
   * **Model:** Represents data objects (User, Message).
   * **View:** UI screens (chat, profile, invites).
   * **ViewModel:** Handles business logic, manages state, and connects the Model with the View.
