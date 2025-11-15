@@ -8,7 +8,7 @@ import 'package:fire_chat/ui/widgets/button_widget.dart';
 class InviteScreen extends StatelessWidget {
   const InviteScreen({super.key});
 
-  final String apkDownloadLink = "https://your-app-link-here.com/app.apk";
+  final String apkDownloadLink = "https://github.com/AnuragBorker/App_Dev_Mini_Project/releases/download/v1.0.0/app-release.apk";
 
   @override
   Widget build(BuildContext context) {
