@@ -25,13 +25,15 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Header like ChatListScreen
+                  // Header
                   Padding(
                     padding: EdgeInsets.only(top: 50.h, bottom: 20.h),
                     child: Text(
                       "Profile",
                       style: TextStyle(
-                          fontSize: 28, fontWeight: FontWeight.bold),
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
 
@@ -40,15 +42,18 @@ class ProfileScreen extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 50,
                       backgroundColor: Colors.grey.shade300,
-                      backgroundImage: currentUser?.imageUrl != null && currentUser!.imageUrl!.isNotEmpty
+                      backgroundImage: currentUser?.imageUrl != null &&
+                          currentUser!.imageUrl!.isNotEmpty
                           ? NetworkImage(currentUser.imageUrl!)
                           : null,
-                      child: currentUser?.imageUrl == null || currentUser!.imageUrl!.isEmpty
+                      child: currentUser?.imageUrl == null ||
+                          currentUser!.imageUrl!.isEmpty
                           ? Text(
                         (currentUser?.name?.isNotEmpty ?? false)
                             ? currentUser!.name![0]
                             : "?",
-                        style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        style: const TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold),
                       )
                           : null,
                     ),
@@ -67,10 +72,55 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         Text(
                           currentUser?.email ?? "example@email.com",
-                          style:
-                          const TextStyle(fontSize: 16, color: Colors.grey),
+                          style: const TextStyle(
+                              fontSize: 16, color: Colors.grey),
                         ),
                       ],
+                    ),
+                  ),
+
+                  25.verticalSpace,
+
+                  // 🔥 QUOTE SECTION (REST API)
+                  Center(
+                    child: Container(
+                      padding: EdgeInsets.all(14),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade50,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Thought for the Moment",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                          10.verticalSpace,
+                          Text(
+                            model.quote,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey.shade800,
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                          10.verticalSpace,
+                          GestureDetector(
+                            onTap: model.loadQuote,
+                            child: Text(
+                              "Refresh Quote",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.blue,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
 
@@ -78,7 +128,8 @@ class ProfileScreen extends StatelessWidget {
 
                   // Change password button
                   CustomButton(
-                    buttonText: model.isLoading ? "Processing..." : "Change Password",
+                    buttonText:
+                    model.isLoading ? "Processing..." : "Change Password",
                     onPressed: model.isLoading
                         ? null
                         : () => _showChangePasswordBottomSheet(context),
@@ -90,7 +141,8 @@ class ProfileScreen extends StatelessWidget {
                   CustomButton(
                     buttonText: "Logout",
                     onPressed: () {
-                      Provider.of<UserProvider>(context, listen: false).clearUser();
+                      Provider.of<UserProvider>(context, listen: false)
+                          .clearUser();
                       model.logout();
                       AuthService().logout();
                     },
@@ -104,9 +156,10 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  /// Show modern bottom sheet for password change
+  /// Modern bottom sheet for password change
   void _showChangePasswordBottomSheet(BuildContext context) {
-    final viewModel = Provider.of<ProfileScreenViewModel>(context, listen: false);
+    final viewModel =
+    Provider.of<ProfileScreenViewModel>(context, listen: false);
 
     showModalBottomSheet(
       context: context,
